@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom property
+    </title>
+    <style>
+        :root {
+            --bokacuda-border: 2px solid black;
+            --main-color: orange;
+            --border-color: slateblue;
+            --background: slateblue;
+            --side-width: 200px;
+        }
+
+        h1 {
+            color: var(--main-color);
+        }
+
+        p {
+            color: var(--main-color);
+        }
+
+        h2 {
+            border: 2px solid var();
+            color: var(--main-color);
+        }
+
+        h6 {
+            background: var(--main-color);
+        }
+
+        footer {
+            clear: both;
+            border: var(--bokacuda-border);
+            color: var(--main-color);
+        }
+
+        .side-nav,
+        .blogs {
+            float: left;
+            height: 500px;
+        }
+
+        .side-nav {
+            background: springgreen;
+            width: var(--side-width);
+        }
+
+        .blogs {
+            background: tomato;
+            width: calc(100% - 3*var(--side-width));
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>I am Exploring CSS properties</h1>
+        <p>Welcome To My Website </p>
+    </header>
+
+    <main>
+        <h2>My awesome content</h2>
+        <h6>My tiny Heading </h6>
+        <section>
+            <aside class="side-nav">
+                My aside Navigation
+            </aside>
+            <div class="blogs">
+                <h4>Blog</h4>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><small>copyright</small></p>
+    </footer>
+</body>
+
+</html>
